@@ -25,7 +25,7 @@ from biodatasets import load_dataset
 
 alphafold_dataset = load_dataset("alphafold")
 
-X, y = alphafold_dataset.to_npy_array(["sequence"], target_names=["label"])
+X, y = alphafold_dataset.to_npy_arrays(["sequence"], target_names=["label"])
 mean_embeddings = alphafold_dataset.get_embeddings("sequence", "protbert", "mean")
 
 ```
